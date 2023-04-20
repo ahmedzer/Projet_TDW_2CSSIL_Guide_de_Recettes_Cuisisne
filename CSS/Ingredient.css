@@ -1,0 +1,190 @@
+.Menu{
+    position:sticky;/* set the position of the navigation bar*/
+    horiz-align: center;
+    display:flex;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 32/1;
+    margin: 0;
+    padding: 20px 0; /* Adding some padding */
+    background: #ffffff; /* Add a white background color to the top navigation */
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.3)
+}
+
+/* Style the links inside the navigation bar */
+ul li{
+    list-style: none;
+    text-align: center;
+    display: flex;
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+ul li:last-child{
+    border-right: none;
+}
+ul li a{
+    text-decoration: none;
+    padding: 0 40px;
+    display: block;
+}
+/* Style the icon inside the navigation bar */
+ul li a .icon{
+    width: 2.5vw; /* changing the width of the icon */
+    height: 2.5vw; /* changing the height of the icon */
+    text-align: center;
+
+    overflow: hidden;
+    margin: 0 auto 7px;
+
+}
+/* set the size, height, width of the icon*/
+ul li a .icon .fa{
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 25px;
+    transition: 0.5s; /* adding the transition to make it more attractive */
+    color: #000000;
+}
+
+/* Change the color of icon on hover */
+ul li a .icon .fa:last-child{
+    color: #6da06f;
+}
+/* style the color and transform of the icon on hover */
+ul li a:hover .icon .fa{
+    transform: translateY(-100%); /* translate y to add the hover effect */
+}
+ul li a .name{
+    position: relative;
+    height: 20px;
+    width: 100%;
+    display: block;
+    overflow: hidden;/*make ul li a .name overflow is hidden*/
+}
+/*style the font size and set transition of the navigation menu*/
+ul li a .name span{
+    display: block;
+    position: relative;
+    color: #000000;
+    font-size: 1vw; /* changing font size */
+    line-height: 20px;
+    transition: 0.5s; /* adding the transition to make it more attractive */
+
+}
+/*set and change position, top, width, left, height color of the 'class'.name span:before*/
+ul li a .name span:before{
+    content: attr(data-text);
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    color: #000000;
+
+}
+/*style hover effect of ul li a .name span */
+ul li a:hover .name span{
+    transform: translateY(25px);
+}
+body {
+    margin: 0;
+    background-color: #ffffff;
+}
+* {
+    font-family: sans-serif;
+}
+.ingred_container {
+    display: inline-block;
+    margin-top: 50px;
+
+
+    flex-wrap: wrap;
+    border-radius: 0.8%;
+
+}
+.ingred_discription {
+    display: flex;
+
+    width: 90%;
+    aspect-ratio: 3.5/1;
+    border-bottom: 0.8px solid #676767;
+
+}
+.ingred_discription img {
+    margin-right: 10px;
+    margin-bottom: 1%;
+    width: 30%;
+    aspect-ratio: 3/2;
+    border-radius: 3%;
+}
+.description_ingred {
+    width: 100%;
+    aspect-ratio: 10/2;
+    margin-left: 1%;
+}
+.ingred_container h1 {
+    font-family: sans-serif;
+    color: #6da06f;
+    font-size: 2.1vw;
+}
+.description_text {
+    width: 100%;
+    color: #646262;
+    aspect-ratio: 10/2;
+    font-size: 1.2vw;
+
+    text-align: left;
+    vertical-align: middle;
+}
+.information_generale {
+    max-width: 70%;
+
+    margin: 0.5%;
+    display: grid;
+    place-items: center;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
+}
+.info{
+    color: white;
+    border-radius: 3%;
+    width: 70%;
+
+    aspect-ratio: 2/1;
+    display: flex;
+}
+.info h3 {
+    color: #6c6c6c;
+    margin-top: 1%;
+    margin-bottom: 0;
+}
+.info img {
+    margin-top: 5%;
+    width: 5vw;
+    display: inline-block;
+}
+.info_text {
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+}
+.info_text p{
+    color: #444444;
+    font-size: 1.15vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,405 @@
+/*Mango Tango (#FF8243), Lapis Lazuli (#6da06f), Yellow Orange (#FFAE42), and Bud Green (#7BB661)*/
+
+
+
+.navbar {
+    display: flex;
+    background-color: #FF8243;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    color: #fff;
+    margin-bottom: 20px;
+
+}
+
+
+body {
+    margin: 0;
+    background-color: #f3f3f3;
+}
+.logo {
+    aspect-ratio: 1/1;
+    height: 80%;
+    margin: 5px;
+}
+* {
+    font-family: sans-serif;
+}
+.nav-links {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+    font-size: 18px;
+}
+
+/***menu *****************************************************************************************/
+.Menu{
+    position:relative;/* set the position of the navigation bar*/
+    top: 8%;
+    left: 50%;
+    margin-top: 70px;
+    horiz-align: center;
+    display:flex;
+    z-index: 1111;
+    text-align: center;
+    transform: translate(-50%,-50%);
+
+    padding: 25px 0; /* Adding some padding */
+    background: #FF8243;
+}
+
+/* Style the links inside the navigation bar */
+ul li{
+    list-style: none;
+    text-align: center;
+    display: flex;
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+ul li:last-child{
+    border-right: none;
+}
+ul li a{
+    text-decoration: none;
+    padding: 0 40px;
+    display: block;
+}
+/* Style the icon inside the navigation bar */
+ul li a .icon{
+    width: 40px; /* changing the width of the icon */
+    height: 40px; /* changing the height of the icon */
+    text-align: center;
+
+    overflow: hidden;
+    margin: 0 auto 7px;
+
+}
+/* set the size, height, width of the icon*/
+ul li a .icon .fa{
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 25px;
+    transition: 0.5s; /* adding the transition to make it more attractive */
+    color: #ffffff;
+}
+
+/* Change the color of icon on hover */
+ul li a .icon .fa:last-child{
+    color: #000000;
+}
+/* style the color and transform of the icon on hover */
+ul li a:hover .icon .fa{
+    transform: translateY(-100%); /* translate y to add the hover effect */
+}
+ul li a .name{
+    position: relative;
+    height: 20px;
+    width: 100%;
+    display: block;
+    overflow: hidden;/*make ul li a .name overflow is hidden*/
+}
+/*style the font size and set transition of the navigation menu*/
+ul li a .name span{
+    display: block;
+    position: relative;
+    color: #ffffff;
+    font-size: 16px; /* changing font size */
+    line-height: 20px;
+    transition: 0.5s; /* adding the transition to make it more attractive */
+
+}
+/*set and change position, top, width, left, height color of the 'class'.name span:before*/
+ul li a .name span:before{
+    content: attr(data-text);
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    color: #000000;
+
+}
+/*style hover effect of ul li a .name span */
+ul li a:hover .name span{
+    transform: translateY(25px);
+}
+/**************************************Diaporama ************************************************************************/
+.ContainerDiaporama {
+    margin-top: 20px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 0.8%;
+    width: 100%;
+    aspect-ratio: 32/9;
+}
+
+.diapText {
+    height: 100%;
+    aspect-ratio: 16/9;
+    background-image: linear-gradient(to bottom right, #FF8243, #26619c);
+    display: flex;
+    flex-direction: column;
+}
+.diapImage {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+.diapImage img {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+
+.diap {
+    height: 100%;
+    aspect-ratio: 32/9;
+    display: flex;
+
+}
+.news{
+    height: 100%;
+    aspect-ratio: 32/9;
+    display: flex;
+
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 10s;
+}
+@keyframes fade {
+    /*from {opacity: 0}
+    to {opacity: 1}*/
+    0% {
+        opacity:0;
+        transform: translateX(0px)
+    }
+    10% {
+        opacity: 0.5;
+    }
+    30% {
+        opacity:1;
+        transform: translateX(0px)
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+    80% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+    100% {
+        opacity: 0.6;
+        transform: translateX(-100%)
+    }
+}
+
+.diapTitle {
+    color: white;
+    font-family: sans-serif;
+    width: 100%;
+    font-size: 1.9vw;
+    text-align: center;
+}
+.diapoDescription {
+    padding: 1% 1%;
+    font-size: 1.5vw;
+    margin-right: 2%;
+    color: white;
+    text-align: center;
+    width: 90%;
+    aspect-ratio: 16/5;
+}
+.diaplink {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    background-color: white;
+    opacity: 0.2;
+}
+.diaplink a{
+    color: #000000;
+    z-index: 1;
+    margin: 3%;
+    font-style: normal;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+@media (max-width: 1000px) {
+
+}
+
+
+
+/******************Entree show *************************************************************/
+
+.SectionEnrtree {
+    width: 100%;
+    aspect-ratio: 32/10;
+    display: flex;
+    flex-direction: column;
+}
+.decor {
+    height: 20%;
+    display: flex;
+    gap: 3%;
+    align-items: center;
+    vertical-align: center;
+}
+.decor img{
+    height: 70%;
+}
+.CardContainer {
+    height: 80%;
+    aspect-ratio: 32/9;
+    display: flex;
+    overflow-x: scroll;
+    gap: 4%;
+    horiz-align: center;
+    align-items: center;
+}
+.Card {
+    height: 90%;
+    aspect-ratio: 1.3/1.5;
+    border-radius: 3%;
+    background-color: #6da06f;
+    overflow: hidden;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    display: inline;
+    overflow: initial;
+}
+.Card:first-child {
+    margin-left: 8%;
+}
+.CardTitle {
+    font-size: 18px;
+    color: #ffffff;
+    padding-top: 3px;
+    text-align: center;
+
+    height: 10%;
+}
+.CardImage {
+    height: 35%;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+.CardImage img{
+    height: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 5%;
+    margin: auto;
+}
+.Card p{
+    overflow: hidden;
+    height: 40%;
+    text-align: center;
+    padding-top: 15%;
+    padding-left: 10%;
+    padding-right:10%;
+    margin: 0;
+    font-size: 16px;
+    color: white;
+
+}
+.Card a{
+    height: 100%;
+    color: #090909;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+
+    margin: 0;
+}
+.CardLink {
+    height: 10%;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
+}
+.Card a:hover {
+    color: white;
+}
+
+/*************************************************section plats **************************************************/
+.PlatsSection {
+    width: 100%;
+    aspect-ratio: 32/10;
+    display: flex;
+    flex-direction: column;
+    background-color: #FF8243;
+}
+
+.CardContainer::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    border-radius: 12px;
+    background-color: #dcdcdc;
+}
+
+.CardContainer::-webkit-scrollbar
+{
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    margin: 5px;
+}
+
+
+.CardContainer::-webkit-scrollbar-thumb
+{
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: rgba(169, 169, 169, 0.93);
+}
+
+.cardDessert {
+    background-color: #0da8bd;
+}
+.carousel-item img{
+    width: 850px;
+    height: 450px;
+    align-items: center;
+}
+.carousel-item {
+    width: 850px;
+    height: 450px;
+    align-items: center;
+}
+.carousel {
+    margin: 30px;
+}
+.carousel-item p {
+    max-width: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+.carousel-inner {
+    width: 80%;
+    height: 100%;
+}
+
+.carousel-caption {
+    align-items: center;
+
+}
+
+.carousel-control-prev {
+    background-color:#FF8243 ;
+}
+.carousel-control-next {
+    background-color:#FF8243 ;
+}

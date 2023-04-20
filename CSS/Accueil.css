@@ -1,0 +1,343 @@
+.navbar {
+
+    display: flex;
+    background-color: #2BC48A;
+    position: fixed;
+
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    z-index:1;
+    margin-bottom: 20px;
+    border-bottom-left-radius:8% 8%;
+    border-bottom-right-radius:8% 8%;
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.36);
+}
+body {
+    margin: 0;
+
+}
+.titre {
+    font-size: 35px;
+    font-family:sans-serif;
+}
+.nav-links {
+    display: flex;
+
+    gap: 1em;
+    list-style: none;
+
+    font-size: 18px;
+}
+body {
+    margin: 0;
+}
+.socialImages {
+    margin-right: 20px;
+}
+.logo {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+
+
+}
+.logo:hover {
+    width: 85px;
+    height: 85px;
+    margin: 2.5px;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    display: flex;
+     width: 90%;
+    opacity: 0.9;
+    height:500px;
+
+    margin: 120px;
+    border-radius: 10px;
+}
+* {
+    font-family:sans-serif;
+}
+
+img {
+    vertical-align: center;
+
+}
+.diapoImage {
+    border-bottom-left-radius: 10px;
+
+    border-top-left-radius: 10px;
+    display: flex;
+}
+p {
+    display: inline-block;
+    vertical-align: middle;
+}
+.diapoText {
+    vertical-align: middle;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 50%;
+    background-color: #2BC48A;
+    align-content: center;
+}
+.textContainer {
+    display: flex;
+    width: 250px;
+}
+.slide {
+    display: flex;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 7s;
+}
+.paused{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused;
+    animation-play-state:paused;
+}
+
+@keyframes fade {
+    /*from {opacity: 0}
+    to {opacity: 1}*/
+    0% {
+        opacity: 0.4;
+        transform: translateX(90px)
+    }
+    10% {
+        opacity: 0.5;
+        transform: translateX(50px)
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+    80% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+    100% {
+        opacity: 0.2;
+        transform: translateX(-1000px)
+    }
+}
+
+.anim {
+    animation-name: anim ;
+    animation-duration :1s;
+}
+
+@keyframes anim {
+    0% {
+        opacity: 1;
+
+    }
+    50% {
+        opacity: 0.6;
+        transform: translatey(-200px)
+    }
+    70% {
+        opacity: 0.3;
+        transform: translatey(-200px)
+    }
+    90% {
+        opacity: 0;
+        transform: translatey(-200px)
+    }
+}
+
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
+
+/*menu  **********************************************************************************************/
+.Menu{
+    position:relative;/* set the position of the navigation bar*/
+    top: 8%;
+    left: 50%;
+    horiz-align: center;
+    display:flex;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    margin: 0 0;
+    padding: 20px 0; /* Adding some padding */
+    background:#2BC48A; /* Add a white background color to the top navigation */
+    /* flex Set navigation bar horizontally using the  display tag*/
+    border-radius: 10px; /* add the border radius */
+    box-shadow: 0 10px 30px rgba(0,0,0,.3)
+}
+
+/* Style the links inside the navigation bar */
+ul li{
+    list-style: none;
+    text-align: center;
+    display: flex;
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+ul li:last-child{
+    border-right: none;
+}
+ul li a{
+    text-decoration: none;
+    padding: 0 40px;
+    display: block;
+}
+/* Style the icon inside the navigation bar */
+ul li a .icon{
+    width: 40px; /* changing the width of the icon */
+    height: 40px; /* changing the height of the icon */
+    text-align: center;
+
+    overflow: hidden;
+    margin: 0 auto 7px;
+
+}
+/* set the size, height, width of the icon*/
+ul li a .icon .fa{
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 25px;
+    transition: 0.5s; /* adding the transition to make it more attractive */
+    color: #000000;
+}
+
+/* Change the color of icon on hover */
+ul li a .icon .fa:last-child{
+    color: #fdfdfd;
+}
+/* style the color and transform of the icon on hover */
+ul li a:hover .icon .fa{
+    transform: translateY(-100%); /* translate y to add the hover effect */
+}
+ul li a .name{
+    position: relative;
+    height: 20px;
+    width: 100%;
+    display: block;
+    overflow: hidden;/*make ul li a .name overflow is hidden*/
+}
+/*style the font size and set transition of the navigation menu*/
+ul li a .name span{
+    display: block;
+    position: relative;
+    color: #ffffff;
+    font-size: 16px; /* changing font size */
+    line-height: 20px;
+    transition: 0.5s; /* adding the transition to make it more attractive */
+
+}
+/*set and change position, top, width, left, height color of the 'class'.name span:before*/
+ul li a .name span:before{
+    content: attr(data-text);
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    color: #000000;
+
+}
+/*style hover effect of ul li a .name span */
+ul li a:hover .name span{
+    transform: translateY(25px);
+}
+/**********************************************Entrées *********************************************/
+.cadre{
+    vertical-align: middle;
+    display: inline;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0 30px;
+    background-color: #2BC48A;
+    margin: 20px 10px;
+    align-content: center;
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0.36,0.36);
+}
+
+
+.cadreContainer {
+    display: -webkit-flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    margin-right: 110px;
+    margin-left: 110px;
+    border-radius: 40px;
+    overflow-y: hidden;
+}
+.cadreImage {
+    border-radius: 10px;
+    margin: 5px;
+}
+.cadreImage :hover{
+    border-radius: 10px;
+    width: 160px;
+    height: 160px;
+    margin: 0;
+}
+.cadreText {
+    display: inline-block;
+    color: white;
+    margin: 5px;
+    height: 200px;
+    width: 200px;
+    padding: 0;
+
+}
+.scrollButton .fa{
+    width: 100%;
+    margin: 20px;
+    height: 100%;
+    position: relative;
+    right: 0;
+    z-index: 1;
+    line-height: 40px;
+    font-size: 25px;
+    transition: 0.5s; /* adding the transition to make it more attractive */
+    color: #000000;
+}
+.cadreContainer::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.cadreContainer::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+
+.cadreContainer::-webkit-scrollbar-thumb
+{
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #2BC48A;
+}
+.cadreText p {
+    max-height: 100px;
+    overflow-y: hidden;
+}
+.cadreText h2 {
+    margin: 0 0;
+}
+
+
+

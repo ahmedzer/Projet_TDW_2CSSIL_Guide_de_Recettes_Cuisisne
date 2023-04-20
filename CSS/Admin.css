@@ -1,0 +1,384 @@
+
+body {
+    margin: 0;
+
+
+}
+* {
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+
+}
+
+.leftMenu{
+
+    horiz-align: center;
+    display:flex;
+    height: 100vw;
+    width: 8%;
+    gap: 4%;
+    flex-direction: column;
+    background-color: #FF8243;
+    text-align: center;
+    align-items: center;
+    padding: 0 0;
+    margin: 0 0;
+    position: fixed;
+}
+
+/* Style the links inside the navigation bar */
+ul li{
+    list-style: none;
+    text-align: center;
+    display: flex;
+
+}
+ul li:last-child{
+    border-right: none;
+}
+ul li a{
+    text-decoration: none;
+    display: block;
+
+}
+/* Style the icon inside the navigation bar */
+ul li a .icon{
+    width: 40px; /* changing the width of the icon */
+    height: 40px; /* changing the height of the icon */
+    text-align: center;
+
+    overflow: hidden;
+    margin: 0 auto 7px;
+
+}
+/* set the size, height, width of the icon*/
+ul li a .icon .fa{
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 22px;
+    transition: 0.5s; /* adding the transition to make it more attractive */
+    color: #ffffff;
+}
+
+/* Change the color of icon on hover */
+ul li a .icon .fa:last-child{
+    color: #000000;
+}
+/* style the color and transform of the icon on hover */
+ul li a:hover .icon .fa{
+    transform: translateY(-100%); /* translate y to add the hover effect */
+}
+ul li a .name{
+    position: relative;
+    height: 20px;
+    width: 100%;
+    display: block;
+    overflow: hidden;/*make ul li a .name overflow is hidden*/
+}
+/*style the font size and set transition of the navigation menu*/
+ul li a .name span{
+    display: block;
+    position: relative;
+    color: #ffffff;
+    font-size: 16px; /* changing font size */
+    line-height: 20px;
+    transition: 0.5s; /* adding the transition to make it more attractive */
+
+}
+/*set and change position, top, width, left, height color of the 'class'.name span:before*/
+ul li a .name span:before{
+    content: attr(data-text);
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    color: #000000;
+
+}
+/*style hover effect of ul li a .name span */
+ul li a:hover .name span{
+    transform: translateY(25px);
+}
+
+.container1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+}
+.Section_container {
+    margin-left: 2%;
+    width: 92%;
+    height: 80%;
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap;
+    place-items: center;
+
+
+}
+.Asection {
+    width: 25%;
+    aspect-ratio: 16/9;
+    padding: 0 0;
+    margin: 2% 2%;
+    background-color: #f3f3f3;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+}
+.Asection_titre {
+    background-color: #26619C;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 20%;
+    width: 100%;
+    align-items: center;
+}
+.Asection_titre h4 {
+    text-align: center;
+    margin: 0 0;
+    padding: 2% 2%;
+    color: white;
+}
+.Asection_info {
+    height: 25%;
+    width: 100%;
+    margin-left: 2%;
+    color: #5e5e5e;
+}
+.Asection:hover {
+    border: solid  #dc6d03 0.8px;
+}
+.tabContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 8%;
+}
+.ListContainer::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    border-radius: 12px;
+    background-color: #919191;
+}
+
+.ListContainer::-webkit-scrollbar
+{
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    margin: 5px;
+}
+
+
+.ListContainer::-webkit-scrollbar-thumb
+{
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #FF8243;
+}
+td::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    border-radius: 12px;
+    background-color: #bbbbbb;
+}
+td::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #26619C;
+}
+td::-webkit-scrollbar
+{
+    width: 2px;
+    height: 10px;
+    background-color: #ffffff;
+}
+.dtHorizontalExampleWrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+#dtHorizontalExample {
+    width: 50%;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+#dtHorizontalExample th, td {
+    white-space: nowrap;
+}
+
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+    bottom: .5em;
+}
+
+table th {
+    border:  unset;
+}
+
+#dtHorizontalExample tr:hover {
+    background-color: #e1e1e1;
+}
+.filterSearch {
+    margin-top: 0.5%;
+    padding-bottom: 1%;
+    display: none;
+    width: 100%;
+    height: auto;
+    border-bottom: solid #818181 1px;
+}
+.filterSearch input{
+    width: auto;
+    margin-left: 1%;
+}
+.ListContainer {
+    max-width: 85%;
+    max-height: 100vw;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.tabContainer2 {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 8%;
+}
+.Gestion_Links {
+    width: 90%;
+    height: auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    row-gap: 5%;
+}
+.Gestion_Link {
+    width: 25%;
+    margin-left: 3%;
+    margin-top: 2%;
+    aspect-ratio: 16/9;
+    background-color: #f6f6f6;
+    border-radius: 3%;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Gestion_Link img {
+    width: 30%;
+}
+.Gestion_Link:hover {
+    background-image: linear-gradient(-45deg, rgba(255, 130, 67, 0.74), rgba(38, 97, 156, 0.74));
+    text-decoration: white;
+}
+
+
+#InsertRecetteForm {
+    width: 80%;
+    margin-top: 30px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    align-items: center;
+    row-gap: 3%;
+    text-align: center;
+    padding: 3%;
+    background-color: #ffffff;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    border-radius: 1%;
+
+}
+#InsertRecetteIngred {
+    width: 80%;
+    margin-top: 30px;
+    display:block;
+    gap: 1%;
+    row-gap: 3%;
+    padding: 3%;
+    background-color: #ffffff;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    border-radius: 1%;
+}
+
+#InsertNewsForm {
+    width: 80%;
+    border-top: solid #757575 1px;
+    margin: 30px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    align-items: center;
+    row-gap: 3%;
+    text-align: center;
+    padding: 3%;
+    background-color: #ffffff;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    border-radius: 1%;
+}
+
+#InsertNewsForm * {
+    width: 25%;
+    margin-top: 20px;
+}
+
+#InsertIngredForm {
+    width: 90%;
+    border-top: solid #757575 1px;
+    margin: 30px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    align-items: center;
+    row-gap: 3%;
+    text-align: center;
+    padding: 3%;
+    background-color: #ffffff;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    border-radius: 1%;
+}
+
+#InsertIngredForm * {
+    width: 25%;
+    margin-top: 20px;
+}
+#InsertDiapoForm {
+    width: 90%;
+    border-top: solid #757575 1px;
+    margin: 30px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    align-items: center;
+    row-gap: 3%;
+    text-align: center;
+    padding: 3%;
+    background-color: #ffffff;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    border-radius: 1%;
+}
+
+#InsertDiapoForm * {
+    width: 25%;
+    margin-top: 20px;
+}
+
+
+
